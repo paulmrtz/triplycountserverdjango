@@ -18,8 +18,6 @@ from django.contrib import admin
 from django.urls import include, path
 from django.conf import settings
 from debug_toolbar.toolbar import debug_toolbar_urls
-from rest_framework import routers
-from triplycount import views
 
 urlpatterns = [
     path("triplycount/", include("triplycount.urls")),
