@@ -1,0 +1,81 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pyd
+*.pdb
+*.egg
+*.egg-info/
+dist/
+build/
+pip-wheel-metadata/
+.eggs/
+.env
+.venv
+venv/
+ENV/
+env.bak/
+env/
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+media/
+staticfiles/
+static/
+
+# PostgreSQL (optional – DB data should not be in your repo)
+*.pgsql
+*.psql
+*.dump
+*.sql
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS metadata files
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# IDEs/editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Migrations (optional – ignore if you generate them only locally and not version-controlled)
+# **/migrations/
+# !**/migrations/__init__.py
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# MyPy
+.mypy_cache/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# dotenv
+.env.*
+
+# Gunicorn
+gunicorn.pid

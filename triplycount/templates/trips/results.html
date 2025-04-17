@@ -1,0 +1,9 @@
+<h1>{{ trip.trip_text }}</h1>
+
+<ul>
+{% for expense in trip.expense_set.all %}
+    <li>{{ expense.amount }} amount</li>
+{% endfor %}
+</ul>
+
+<a href="{% url 'trips:detail' trip.id %}">Add One Again?</a>

@@ -1,0 +1,13 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'trips/style.css' %}">
+
+{% if latest_trip_list %}
+    <ul>
+    {% for trip in latest_trip_list %}
+        <li><a href="{% url 'trips:detail' trip.id %}">{{ trip.trip_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No trips are available.</p>
+{% endif %}

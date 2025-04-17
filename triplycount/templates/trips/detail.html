@@ -1,0 +1,12 @@
+<form action="{% url 'trips:addexpenseplusone' trip.id %}" method="post">
+    {% csrf_token %}
+    <fieldset>
+        <legend><h1>{{ trip.trip_text }}</h1></legend>
+        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+        {% for expense in trip.expense_set.all %}
+            <input type="radio" name="expense" id="expense{{ forloop.counter }}" value="{{ expense.id }}">
+            <label for="expense{{ forloop.counter }}">{{ expense.amount }}</label><br>
+        {% endfor %}
+    </fieldset>
+    <input type="submit" value="AddOne">
+</form>
