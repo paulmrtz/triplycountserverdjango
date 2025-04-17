@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 
 from . import views
 
@@ -13,4 +13,5 @@ urlpatterns = [
     # ex: /triplycount/trips/5/addexpenseplusone/
     path("trips/<int:trip_id>/addexpenseplusone/", views.addexpenseplusone, name="addexpenseplusone"),
     path("trips/<int:pk>/results/", views.ResultsView.as_view(), name="results"),
+    path("api/", include("triplycount.api_urls")),
 ]

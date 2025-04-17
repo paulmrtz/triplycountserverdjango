@@ -7,6 +7,19 @@ from django.utils import timezone
 from django.http import HttpResponse, HttpResponseRedirect
 from .models import Trip, Expense
 
+from rest_framework import permissions, viewsets
+from .serializers import TripSerializer, ExpenseSerializer
+
+class TripViewSet(viewsets.ModelViewSet):
+    queryset = Trip.objects.all()
+    serializer_class = TripSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+class ExpenseViewSet(viewsets.ModelViewSet):
+    queryset = Expense.objects.all()
+    serializer_class = ExpenseSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
 class IndexView(generic.ListView):
     template_name = "trips/index.html"
     context_object_name = "latest_trip_list"
